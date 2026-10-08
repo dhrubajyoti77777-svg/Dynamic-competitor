@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/coffees";
+// const API_URL = "http://localhost:5000/api/coffees";
+const API_URL = `${API_BASE_URL}/coffees`;
 
 const form = document.getElementById("addCoffeeForm");
 const statusBox = document.getElementById("status");

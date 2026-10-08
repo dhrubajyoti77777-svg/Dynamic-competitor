@@ -1,4 +1,5 @@
-const API = "http://localhost:5000/api";
+// const API = "http://localhost:5000/api";
+const API = API_BASE_URL;
 
 async function loadFeatured() {
     const root = document.getElementById("featured");
