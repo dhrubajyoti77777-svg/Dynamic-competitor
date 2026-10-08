@@ -1,0 +1,680 @@
+/* =====================================================
+   BEAN & BLOOM
+   SHOP ADMIN DASHBOARD
+   ===================================================== */
+
+
+/* =====================================================
+   NAVIGATION BAR
+   ===================================================== */
+
+.nav {
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255, 253, 249, 0.96);
+    border-bottom: 1px solid #e8ded1;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* Brand */
+
+.nav .brand {
+    display: flex;
+    align-items: center;
+
+    color: #201914;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+}
+
+.nav .brand span {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+
+/* Navigation links */
+
+.nav nav {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.nav nav a {
+    position: relative;
+
+    color: #756960;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.nav nav a:hover {
+    color: #9a5a32;
+}
+
+.nav nav a.active {
+    color: #9a5a32;
+}
+
+
+/* =====================================================
+   DASHBOARD CONTAINER
+   ===================================================== */
+
+.dashboard-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+}
+
+
+/* =====================================================
+   DASHBOARD HEADER
+   ===================================================== */
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    margin: 8px 0 14px;
+
+    color: #302119;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.dashboard-description {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #777;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DASHBOARD ACTIONS
+   ===================================================== */
+
+.dashboard-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.dashboard-actions .primary-btn,
+.dashboard-actions .secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Add Coffee */
+
+.dashboard-actions .primary-btn {
+    background: #4b2e1f;
+    color: #ffffff;
+}
+
+.dashboard-actions .primary-btn:hover {
+    background: #352016;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(75, 46, 31, 0.18);
+}
+
+
+/* Refresh */
+
+.dashboard-actions .secondary-btn {
+    border: 1px solid #ddd2c8;
+
+    background: #f7f3ef;
+    color: #4b2e1f;
+}
+
+.dashboard-actions .secondary-btn:hover {
+    background: #eee7e0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   STATUS MESSAGE
+   ===================================================== */
+
+.status {
+    margin-bottom: 25px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.status.hidden {
+    display: none;
+}
+
+.status.success {
+    display: block;
+
+    background: #edf8f0;
+
+    border: 1px solid #c7e7cf;
+
+    color: #26733e;
+}
+
+.status.error {
+    display: block;
+
+    background: #fff1f1;
+
+    border: 1px solid #efcaca;
+
+    color: #a83232;
+}
+
+
+/* =====================================================
+   DASHBOARD SECTION
+   ===================================================== */
+
+.dashboard-section {
+    margin-top: 20px;
+}
+
+.dashboard-section .section-header {
+    margin-bottom: 24px;
+}
+
+.dashboard-section .section-header h2 {
+    margin: 6px 0;
+
+    color: #302119;
+
+    font-size: 1.8rem;
+}
+
+.dashboard-section .section-header p:not(.eyebrow) {
+    margin: 0;
+
+    color: #888;
+}
+
+
+/* =====================================================
+   COFFEE GRID
+   ===================================================== */
+
+.admin-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   COFFEE CARD
+   ===================================================== */
+
+.admin-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #ebe4dd;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 20px rgba(55, 35, 20, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(55, 35, 20, 0.09);
+}
+
+
+/* =====================================================
+   COFFEE INFORMATION
+   ===================================================== */
+
+.admin-card .coffee-info {
+    min-width: 0;
+}
+
+.admin-card .coffee-info h3 {
+    margin: 0 0 8px;
+
+    color: #302119;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+.admin-card .current-price {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   PRICE CONTROL
+   ===================================================== */
+
+.price-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.price-control input {
+    width: 110px;
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dcd2c9;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #302119;
+
+    font-family: inherit;
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.price-control input:focus {
+    border-color: #72503b;
+
+    box-shadow:
+        0 0 0 3px rgba(114, 80, 59, 0.12);
+}
+
+
+/* Update button */
+
+.price-control button {
+    height: 44px;
+
+    padding: 0 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #4b2e1f;
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.price-control button:hover {
+    background: #352016;
+
+    transform: translateY(-1px);
+}
+
+.price-control button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .nav {
+        padding: 0 5%;
+
+        height: auto;
+        min-height: 70px;
+
+        gap: 15px;
+    }
+
+    .nav nav {
+        gap: 12px;
+    }
+
+
+    .dashboard-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .dashboard-actions {
+        width: 100%;
+    }
+
+    .dashboard-actions .primary-btn,
+    .dashboard-actions .secondary-btn {
+        flex: 1;
+    }
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+
+        padding: 15px 5%;
+    }
+
+    .nav nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .dashboard-page {
+        padding: 40px 16px 60px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .dashboard-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .dashboard-actions .primary-btn,
+    .dashboard-actions .secondary-btn {
+        width: 100%;
+    }
+
+    .admin-card {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .price-control {
+        width: 100%;
+    }
+
+    .price-control input {
+        flex: 1;
+
+        width: auto;
+    }
+
+    .price-control button {
+        flex: 1;
+    }
+}
+
+/* =====================================================
+   ADMIN DARK MODE - COMPLETE
+   ===================================================== */
+
+.dark-mode body {
+    background: #181310;
+    color: #eee7df;
+}
+
+/* Navigation */
+
+.dark-mode .nav {
+    background: rgba(24, 19, 16, 0.96);
+    border-bottom-color: #3a3029;
+}
+
+.dark-mode .nav .brand {
+    color: #f4eee8;
+}
+
+.dark-mode .nav nav a {
+    color: #bdb3aa;
+}
+
+.dark-mode .nav nav a:hover,
+.dark-mode .nav nav a.active {
+    color: #d99a6c;
+}
+
+/* Theme button */
+
+.dark-mode .theme-toggle {
+    background: #2b241f;
+    border-color: #4a3d34;
+    color: #f4eee8;
+}
+
+/* Dashboard heading */
+
+.dark-mode .dashboard-header h1 {
+    color: #f4eee8;
+}
+
+.dark-mode .dashboard-description {
+    color: #bdb3aa;
+}
+
+/* Section */
+
+.dark-mode .dashboard-section .section-header h2 {
+    color: #f4eee8;
+}
+
+.dark-mode .dashboard-section .section-header p:not(.eyebrow) {
+    color: #aaa098;
+}
+
+/* Eyebrow */
+
+.dark-mode .eyebrow {
+    color: #d99a6c;
+}
+
+/* Coffee cards */
+
+.dark-mode .admin-card {
+    background: #241e1a;
+    border-color: #3a3029;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30);
+}
+
+.dark-mode .admin-card:hover {
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.40);
+}
+
+.dark-mode .admin-card .coffee-info h3 {
+    color: #f4eee8;
+}
+
+.dark-mode .admin-card .current-price {
+    color: #aaa098;
+}
+
+/* Price input */
+
+.dark-mode .price-control input {
+    background: #181310;
+    border-color: #4a3d34;
+    color: #f4eee8;
+}
+
+.dark-mode .price-control input::placeholder {
+    color: #776d65;
+}
+
+.dark-mode .price-control input:focus {
+    border-color: #b9784d;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 120, 77, 0.18);
+}
+
+/* Buttons */
+
+.dark-mode .dashboard-actions .secondary-btn {
+    background: #2b241f;
+    border-color: #4a3d34;
+    color: #eadfd5;
+}
+
+.dark-mode .dashboard-actions .secondary-btn:hover {
+    background: #352c26;
+}
+
+.dark-mode .price-control button,
+.dark-mode .dashboard-actions .primary-btn {
+    background: #8b5537;
+    color: #ffffff;
+}
+
+.dark-mode .price-control button:hover,
+.dark-mode .dashboard-actions .primary-btn:hover {
+    background: #a86743;
+}
+
+/* Status */
+
+.dark-mode .status.success {
+    background: #193022;
+    border-color: #315d41;
+    color: #9cddb1;
+}
+
+.dark-mode .status.error {
+    background: #351d1d;
+    border-color: #693838;
+    color: #f0a5a5;
+}
+
+/* Footer */
+
+.dark-mode footer {
+    background: #181310;
+    border-top-color: #3a3029;
+    color: #aaa098;
+}

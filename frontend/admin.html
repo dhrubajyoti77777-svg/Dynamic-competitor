@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shop Dashboard · Bean & Bloom</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Dashboard styles -->
+    <link rel="stylesheet" href="./css/admin.css" />
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="nav">
+
+        <a class="brand" href="index.html">
+            <span>☕</span>
+            Bean & Bloom
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="admin.html" class="active">
+                Shop Dashboard
+            </a>
+
+            <a href="add-coffee.html">
+                Add Coffee
+            </a>
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to night mode">
+                🌙
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="page dashboard-page">
+
+        <section class="dashboard-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    SHOP OWNER
+                </p>
+
+                <h1>
+                    Price Control Center
+                </h1>
+
+                <p class="dashboard-description">
+                    Manage your competitor coffee prices from one place.
+                    Changes are stored in the competitor coffee database
+                    and detected automatically by the Dynamic Pricing system.
+                </p>
+
+            </div>
+
+            <div class="dashboard-actions">
+
+                <a
+                    href="add-coffee.html"
+                    class="primary-btn">
+                    + Add Coffee
+                </a>
+
+                <button
+                    id="refreshBtn"
+                    class="secondary-btn"
+                    type="button">
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="status"
+            class="status hidden">
+        </div>
+
+
+        <!-- COFFEE MANAGEMENT -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        COMPETITOR COFFEES
+                    </p>
+
+                    <h2>
+                        Manage Coffee Prices
+                    </h2>
+
+                    <p>
+                        Update the current selling price of any coffee.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="adminGrid"
+                class="admin-grid">
+
+                <!-- admin.js loads coffees here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        Bean & Bloom · Competitor Coffee Shop
+    </footer>
+
+
+    <!-- Theme first -->
+    <script src="./js/theme.js"></script>
+
+    <!-- Dashboard JS -->
+    <script src="./js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Menu · Bean & Bloom</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+   <header class="nav">
+
+    <a class="brand" href="index.html">
+        <span>☕</span>
+        Bean & Bloom
+    </a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="admin.html">
+            Shop Dashboard
+        </a>
+
+        <a
+            href="add-coffee.html"
+            class="active">
+            Add Coffee
+        </a>
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to night mode">
+            🌙
+        </button>
+
+    </nav>
+
+</header>
+
+
+    <main class="page">
+
+        <div class="page-title">
+
+            <p class="eyebrow">
+                OUR MENU
+            </p>
+
+            <h1>
+                Coffee, your way.
+            </h1>
+
+            <p>
+                Browse the competitor shop's current coffee prices.
+            </p>
+
+        </div>
+
+
+        <div id="menuGrid" class="coffee-grid">
+
+            <!-- Coffees loaded by menu.js -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        Bean & Bloom · Competitor Coffee Shop Demo
+    </footer>
+
+
+    <script src="js/menu.js"></script>
+    <script src="./js/theme.js"></script>
+<script src="./js/admin.js"></script>
+
+</body>
+
+</html>

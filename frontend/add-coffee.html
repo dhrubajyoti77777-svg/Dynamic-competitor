@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Add Coffee · Bean & Bloom</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Add Coffee page styles -->
+    <link rel="stylesheet" href="./css/add-coffee.css" />
+</head>
+
+<body>
+
+    <!-- =================================
+         NAVIGATION
+         ================================= -->
+
+    <header class="nav">
+
+    <a class="brand" href="index.html">
+        <span>☕</span>
+        Bean & Bloom
+    </a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="admin.html">
+            Shop Dashboard
+        </a>
+
+        <a
+            href="add-coffee.html"
+            class="active">
+            Add Coffee
+        </a>
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to night mode">
+            🌙
+        </button>
+
+    </nav>
+
+</header>
+
+
+    <!-- =================================
+         MAIN CONTENT
+         ================================= -->
+
+    <main class="add-coffee-page">
+
+        <!-- Page heading -->
+
+        <div class="add-coffee-header">
+
+            <p class="eyebrow">
+                SHOP OWNER
+            </p>
+
+            <h1>
+                Add a new coffee.
+            </h1>
+
+            <p>
+                Add a new coffee and its current competitor
+                price to your coffee shop database.
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             ADD COFFEE FORM
+             ================================= -->
+
+        <section class="add-coffee-card">
+
+            <form id="addCoffeeForm">
+
+                <!-- Coffee name -->
+
+                <div class="form-group">
+
+                    <label for="coffeeName">
+                        Coffee Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="coffeeName"
+                        name="name"
+                        placeholder="e.g. Cappuccino"
+                        autocomplete="off"
+                        required
+                    />
+
+                </div>
+
+
+                <!-- Coffee price -->
+
+                <div class="form-group">
+
+                    <label for="coffeePrice">
+                        Current Price (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="coffeePrice"
+                        name="price"
+                        min="0.01"
+                        step="0.01"
+                        placeholder="e.g. 180"
+                        required
+                    />
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="add-coffee-btn">
+                    Add Coffee
+                </button>
+
+            </form>
+
+
+            <!-- Status message -->
+
+            <div
+                id="status"
+                class="add-coffee-status hidden">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         FOOTER
+         ================================= -->
+
+    <footer>
+        Bean & Bloom · Competitor Coffee Shop
+    </footer>
+
+
+    <!-- =================================
+         JAVASCRIPT
+         ================================= -->
+
+    <script src="./js/add-coffee.js"></script>
+     <script src="./js/theme.js"></script>
+<script src="./js/admin.js"></script>
+
+</body>
+
+</html>
